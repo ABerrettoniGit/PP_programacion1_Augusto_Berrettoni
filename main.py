@@ -30,7 +30,7 @@ matriz = [[523, 100, 6, 298, 499, 500],
 # ejercicios.necesario_reponer(matriz, depositos, tipos)
 
 #5
-# ejercicios.calcular_mayor_recaudacion(matriz, precios, depositos, tipos)
+ejercicios.calcular_mayor_recaudacion(matriz, precios, depositos, tipos)
 
 
 #6
@@ -38,5 +38,5 @@ matriz = [[523, 100, 6, 298, 499, 500],
 
 
 #7
-ejercicios.calcular_almacenados(matriz, tipos)
-ejercicios.calcular_porcentaje(matriz, tipos)
+# ejercicios.calcular_almacenados(matriz, tipos)
+# ejercicios.calcular_porcentaje(matriz, tipos)

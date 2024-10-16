@@ -50,12 +50,11 @@ def calcular_mayor_recaudacion(matriz: list, precios: list, deposito: list, tipo
     suma_total = calcular_cantidad_juguetes(matriz)
     bandera_mayor = False
     mayor_recaudado = 0
-
     precio_total = [0] *len(suma_total)
 
     deposito_mayor_recaudado = [0]
     for i in range(len(matriz)):
-        precio_total.append(precios[i] * suma_total[i])
+        precio_total[i] += precios[i] * suma_total[i]
         
     
     for i in range(len(deposito)):
