@@ -46,6 +46,7 @@ def necesario_reponer (matriz: list, depositos: list, tipos: list):
 
 #5
 def calcular_mayor_recaudacion(matriz: list, precios: list, deposito: list, tipo: list):
+    
     suma_total = calcular_cantidad_juguetes(matriz)
     bandera_mayor = False
     mayor_recaudado = 0
@@ -55,7 +56,6 @@ def calcular_mayor_recaudacion(matriz: list, precios: list, deposito: list, tipo
     deposito_mayor_recaudado = [0]
     for i in range(len(matriz)):
         precio_total.append(precios[i] * suma_total[i])
-        print(precio_total)
         
     
     for i in range(len(deposito)):
@@ -74,6 +74,53 @@ def calcular_mayor_50k(matriz: list, depositos: list ):
     for i in range(len(cantidad_total)):
         if cantidad_total[i] > 50000:
             print(f"{depositos[i]} cuenta con una cantidad de: {cantidad_total[i]} unidades totales")
+
+#7
+#tipos = ["autos", "muñecas", "trenes", "peluches", "spinners", "cartas"]
+def calcular_almacenados(matriz: list, tipos: list) -> list:
+    if type(matriz) != list or type(tipos) != list:
+        mensaje = "Se esperaba una lista"
+        return mensaje
+    
+    suma_tipo = [0, 0, 0, 0, 0, 0] 
+    suma_total = 0
+
+    for i in range(len(matriz)):
+        for j in range(len(matriz[i])):
+            if tipos[j] == "autos":
+                suma_tipo[j] += matriz[i][j] 
+            elif tipos[j] == "muñecas":
+                suma_tipo[j] += matriz[i][j]
+            elif tipos[j] == "trenes":
+                suma_tipo[j] += matriz[i][j]
+            elif tipos[j] == "peluches":
+                suma_tipo[j] += matriz[i][j]
+            elif tipos[j] == "spinners":
+                suma_tipo[j] += matriz[i][j]
+            else:
+                suma_tipo[j] += matriz[i][j]
+
+            
+
+    return suma_tipo
+
+def calcular_porcentaje(matriz: list, tipos: list):
+    matriz_total = calcular_almacenados(matriz, tipos)
+    suma_total = 0
+    porcentaje = 0
+
+    for i in range(len(matriz_total)):
+        suma_total += matriz_total[i]
+    
+    for i in range(len(matriz_total)):
+        porcentaje = matriz_total[i] / suma_total * 100
+        print(porcentaje)
+    
+    
+    
+
+
+
 
 #9 
 def carga_aleatoria(matriz: list) -> list:
